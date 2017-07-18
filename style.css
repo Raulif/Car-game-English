@@ -114,7 +114,12 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   font-weight: bold;
+  margin-top: 1px;
+}
 
+.focus-fuel{
+  color: red;
+  background-color: black;
 }
 
 .highlight {

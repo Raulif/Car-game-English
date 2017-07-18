@@ -25,6 +25,7 @@ $(document).ready(function(){
     }
     else {
       document.getElementById("outputBox").value="You need FUEL to start the car";
+      $("#fuel-label").addClass("focus-fuel");
     }
   });
 
@@ -60,6 +61,7 @@ $(document).ready(function(){
   //ADD FUEL button:
   $("#addFuel-btn").click(function(){
     if (fuel < 3){
+      $("#fuel-label").removeClass("focus-fuel");
       fuel++;
       document.getElementById("outputBox").value="Fuel level is " + fuel;
       animateFuel();

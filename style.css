@@ -1,11 +1,108 @@
 body {
   background-color: green;
+  margin: 0;
+  padding: 0;
+}
+
+.sky{
+  width: auto;
+  height: 450px;
+  background-color: white;
+
 }
 
 .road{
-  width: auto;
+  position: relative;
+  width: 100%;
   height: 60px;
   background-color: brown;
-  margin-top: 500px;
+}
 
+.textContainer{
+  position: absolute;
+  width: 50%;
+  max-height: 50px;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: center;
+}
+
+#outputBox{
+  position: absolute;
+  background-color: black;
+  max-height: 50px;
+  color: yellow;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*#fuel-counter{
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 50px
+  float: left;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  border-bottom: solid 2px;
+}*/
+
+#car-icon{
+  height: 150px;
+  margin-top: 340px;
+  margin-left: 10px;
+  margin-right: 10px;
+  left: auto;
+  position: absolute;
+  background-color: white;
+}
+
+.car-back{
+  height: auto;
+  width: auto;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.btn-field{
+  clear: both;
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.btn {
+  height: 150px;
+  width: 150px;
+  vertical-align: middle;
+  border-radius: 8%;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  background-color: #C1C7C2;
+
+}
+
+.highlight {
+  background-color: #4F60B2;
+  color: #B4B5B8;
+}
+
+.start-on{
+  background-color: #7DFF93;
+  color: black;
+}
+
+.stop-on{
+  background-color: red;
+  color: black;
 }

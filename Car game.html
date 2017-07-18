@@ -3,27 +3,41 @@
 	<head>
 		<meta charset = "utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 		<title>Car game</title>
 	</head>
 
 <body>
-<div class="road"></div>
-<img id="car-icon" href="\Car game\automobile.svg">
+  <div class="sky">
+		<img id="car-icon" src="https://github.com/Raulif/Car-game/raw/master/car.png">
+  </div>
+  <div class="road">
+		<div class="textContainer">
+			<textarea id="outputBox" placeholder="System console"></textarea>
+		</div>
+	</div>
+  <div class="lower-part">
 
+		<div class="btn-field">
+      <button class="btn" id="start-btn">START</button>
+      <button class="btn stop-on" id="stop-btn">STOP</button>
+      <button class="btn" id="drive-btn">DRIVE</button>
+      <button class="btn" id="addFuel-btn">ADD FUEL</button>
+      <button class="btn" id="turn-btn">TURN</button>
+    </div>
+  </div>
 </body>
 
-<script src="code.js">
-</script>
 
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+<script src="code.js"></script>
 </html>
 
 
 
-
-<!--RED CAR credit the author <div>Icons made by <a href="http://www.freepik.com"
-title="Freepik">Freepik</a> from <a href="http://www.flaticon.com"
-title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
 
 <!--WHITE CAR <div>Icons made by <a href="http://www.flaticon.com/authors/iconnice"
 title="Iconnice">Iconnice</a> from <a href="http://www.flaticon.com"

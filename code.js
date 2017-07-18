@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 
 
-  //START car.
+  //START button:
   $("#start-btn").click(function(){
     if(checkFuel()){
       carState = true;
@@ -28,7 +28,7 @@ $(document).ready(function(){
     }
   });
 
-  //STOP button.
+  //STOP button:
   $("#stop-btn").click(function(){
     if(carState == false){
       document.getElementById("outputBox").value="The car is already OFF!";
@@ -41,7 +41,7 @@ $(document).ready(function(){
     }
   });
 
-  //Flip the car:
+  //TURN button:
   $("#turn-btn").click(function(){
     console.log("Car is " + carState);
     if(checkCarState()){
@@ -57,7 +57,7 @@ $(document).ready(function(){
     }
   });
 
-  //Add fuel:
+  //ADD FUEL button:
   $("#addFuel-btn").click(function(){
     if (fuel < 3){
       fuel++;
@@ -68,7 +68,7 @@ $(document).ready(function(){
     }
   });
 
-  //Drive back and forth:
+  //DRIVE button, back and forth:
   $("#drive-btn").click(function(){
     if (carIsAnimated()){
       $("drive-btn").attr("disabled", "disabled");
@@ -109,24 +109,24 @@ function checkFuel(){
 function animateFuel(){
   switch (fuel){
     case 3:
-      $("#fuel-level").animate({
+      $("#fuel-level").animate({                                                //Fuel level at 100%;
         height: "150"
       }, 750);
     break;
     case 2:
-      $("#fuel-level").animate({
+      $("#fuel-level").animate({                                                //Fuel level at 66%;
         height: "100"
       }, 750);
     break;
     case 1:
-      $("#fuel-level").animate({
+      $("#fuel-level").animate({                                                //Fuel level at 33%;
         height: "50px"
       }, 750);
     break;
     case 0:
-    $("#fuel-level").animate({
-      height: "10px"
-    }, 750);
+      $("#fuel-level").animate({                                                //Fuel level at 0%;
+        height: "5px"
+      }, 750);
     setTimeout(alertNoFuel, 1500);
     break;
   }
@@ -171,7 +171,7 @@ function driveRight(){
     return false;
   } else {
     $("#car-icon").animate({
-    right: "0"                                                                //Drive to the right.
+    right: "0"
     }, 1500).addClass("Moved").css({left: ''});
     document.getElementById("outputBox").value="Car goes wiiiiiiiiiii!!!!!";
     fuel--;
@@ -187,7 +187,7 @@ function driveLeft(){
     return false;
   } else {
     $("#car-icon").animate({
-    left: "0"                                                                 //Drive to the left.
+    left: "0"
     }, 1500).removeClass("Moved").css({right: ''});
     document.getElementById("outputBox").value="Car goes wiiiiiiiiiii!!!!!";
     fuel--;
@@ -196,6 +196,7 @@ function driveLeft(){
   }
 };
 
+//Check if car is driving:
 function carIsAnimated(){
   if ($("#car-icon").is(":animated")) {
     return true;
@@ -204,6 +205,7 @@ function carIsAnimated(){
   }
 };
 
+//Alert if fuel level is 0:
 function alertNoFuel(){
   document.getElementById("outputBox").value="Fuel is gone. The car has STOPPED!";
 };

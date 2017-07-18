@@ -91,6 +91,8 @@ body {
   position: absolute;
   float: right;
   right: 200px;
+  border-style: solid;
+  border-width: thin;
 }
 
 #fuel-level{

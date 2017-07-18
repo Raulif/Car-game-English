@@ -127,6 +127,7 @@ function animateFuel(){
     $("#fuel-level").animate({
       height: "10px"
     }, 750);
+    setTimeout(alertNoFuel, 1500);
     break;
   }
 };
@@ -134,7 +135,7 @@ function animateFuel(){
 //Stop the car if there is no fuel:
 function stopIfNoFuel(){
   if (!checkFuel()){
-    stopCar();
+    setTimeout(stopCar, 1500);
   }
   else {
     return true;
@@ -201,4 +202,8 @@ function carIsAnimated(){
   } else {
     return false;
   }
+};
+
+function alertNoFuel(){
+  document.getElementById("outputBox").value="Fuel is gone. The car has STOPPED!";
 };
